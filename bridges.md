@@ -3,7 +3,7 @@ bridges
 Duohan Zhang
 9/16/2021
 
-## github link: <https://github.com/duohan0520/my_hw_433/blob/master/faculty.html>
+## github link: <https://github.com/duohan0520/my_hw_433>
 
 ``` r
 library(stringr)
