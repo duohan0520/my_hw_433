@@ -5,6 +5,18 @@ date: "9/16/2021"
 output: github_document
 ---
 
+
 ```{r}
-hist(rnorm(10))
+library(stringr)
+file = readLines("Faculty.html")[166]
+# I amend the original file so that Line 166 has all the info we need.
+x =  strsplit(file,split=c("<br/></p></li><li><p>","<ul class=\"uw-people\"><li><p>","<br/>"))
+# get a list in which each element is the info for one person.
+z = strsplit(unlist(x),split = c("br"))
+c(z[1],z[3764])
+# the info of first and last person, including some useless info.
+```
+
+```{r}
+str(z)
 ```
