@@ -5,7 +5,7 @@ date: "9/16/2021"
 output: github_document
 ---
 
-
+## github link: https://github.com/duohan0520/my_hw_433/blob/master/faculty.html
 ```{r}
 library(stringr)
 file = readLines("Faculty.html")[166]
