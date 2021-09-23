@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2022.44">
+  <style type="text/css">
+    p.p2 {margin: 0.0px 0.0px 16.0px 0.0px; line-height: 25.6px; font: 16.0px 'Helvetica Neue'; color: #262626; -webkit-text-stroke: #262626}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 19.7px; font: 13.6px Menlo; color: #262626; -webkit-text-stroke: #262626; background-color: #f5f5f5}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 19.7px; font: 13.6px Menlo; color: #13247e; -webkit-text-stroke: #13247e; background-color: #f5f5f5}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 19.7px; font: 13.6px Menlo; color: #848684; -webkit-text-stroke: #848684; background-color: #f5f5f5}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 19.7px; font: 13.6px Menlo; color: #53954a; -webkit-text-stroke: #53954a; background-color: #f5f5f5}
+    span.s1 {font-kerning: none}
+    span.s2 {font-kerning: none; color: #262626; -webkit-text-stroke: 0px #262626}
+    span.s3 {font-kerning: none; color: #3262b2; -webkit-text-stroke: 0px #3262b2}
+    span.s4 {font-kerning: none; color: #53954a; -webkit-text-stroke: 0px #53954a}
+    span.s5 {font-kerning: none; color: #0e72a4; -webkit-text-stroke: 0px #0e72a4}
+    span.s6 {font-kerning: none; color: #118987; -webkit-text-stroke: 0px #118987}
+    span.s7 {font-kerning: none; color: #0e6e6d; -webkit-text-stroke: 0px #0e6e6d}
+    span.s8 {font-kerning: none; color: #13247e; -webkit-text-stroke: 0px #13247e}
+  </style>
+</head>
+<body>
+<h1 style="margin: 0.0px 0.0px 16.0px 0.0px; line-height: 43.2px; font: 36.0px 'Helvetica Neue'; color: #262626; -webkit-text-stroke: #262626"><span class="s1"><b>bridges</b></span></h1>
+<p class="p2"><span class="s1">Duohan Zhang 9/16/2021</span></p>
+<h2 style="margin: 0.0px 0.0px 16.0px 0.0px; line-height: 34.3px; font: 28.0px 'Helvetica Neue'; color: #3262b2; -webkit-text-stroke: #3262b2"><span class="s2"><b>github link: </b><a href="https://github.com/duohan0520/my_hw_433"><span class="s3"><b>https://github.com/duohan0520/my_hw_433</b></span></a></span></h2>
+<p class="p4"><span class="s4">library</span><span class="s1">(stringr)</span></p>
+<p class="p4"><span class="s1">## Warning: package 'stringr' was built under R version 4.0.2</span></p>
+<p class="p5"><span class="s2">file </span><span class="s5">=</span><span class="s2"> </span><span class="s4">readLines</span><span class="s2">(</span><span class="s1">"Faculty.html"</span><span class="s2">)[</span><span class="s6">166</span><span class="s2">]</span></p>
+<p class="p6"><span class="s1"># I amend the original file so that Line 166 has all the info we need.</span></p>
+<p class="p5"><span class="s2">x </span><span class="s5">=</span><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s4">strsplit</span><span class="s2">(file,</span><span class="s7">split=</span><span class="s4">c</span><span class="s2">(</span><span class="s1">"&lt;br/&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;"</span><span class="s2">,</span><span class="s1">"&lt;ul class=</span><span class="s7">\"</span><span class="s1">uw-people</span><span class="s7">\"</span><span class="s1">&gt;&lt;li&gt;&lt;p&gt;"</span><span class="s2">,</span><span class="s1">"&lt;br/&gt;"</span><span class="s2">))</span></p>
+<p class="p6"><span class="s1"># get a list in which each element is the info for one person.</span></p>
+<p class="p7"><span class="s2">z </span><span class="s5">=</span><span class="s2"> </span><span class="s1">strsplit</span><span class="s2">(</span><span class="s1">unlist</span><span class="s2">(x),</span><span class="s7">split =</span><span class="s2"> </span><span class="s1">c</span><span class="s2">(</span><span class="s8">"br"</span><span class="s2">))</span></p>
+<p class="p4"><span class="s4">c</span><span class="s1">(z[</span><span class="s6">1</span><span class="s1">],z[</span><span class="s6">3764</span><span class="s1">])</span></p>
+<p class="p4"><span class="s1">## [[1]]</span></p>
+<p class="p4"><span class="s1">## [1] "&lt;ul class=\"uw-people\"&gt;&lt;li&gt;&lt;p&gt;ABBOTT,DAVID H.&lt;"</span></p>
+<p class="p4"><span class="s1">## [2] "/&gt;Professor&lt;"<span class="Apple-converted-space">                                   </span></span></p>
+<p class="p4"><span class="s1">## [3] "/&gt;Obstetrics &amp;amp; Gynecology&lt;"<span class="Apple-converted-space">                 </span></span></p>
+<p class="p4"><span class="s1">## [4] "/&gt;PHD 1979 University of Edinburgh"<span class="Apple-converted-space">             </span></span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">## [[2]]</span></p>
+<p class="p4"><span class="s1">## [1] "ZWEIBEL,ELLEN G&lt;" <span class="Apple-converted-space">                </span>"/&gt;Professor&lt;" <span class="Apple-converted-space">                   </span></span></p>
+<p class="p4"><span class="s1">## [3] "/&gt;Astronomy&lt;" <span class="Apple-converted-space">                    </span>"/&gt;PHD 1977 Princeton University&lt;"</span></p>
+<p class="p4"><span class="s1">## [5] "/&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;"</span></p>
+<p class="p6"><span class="s1"># the info of first and last person, including some useless info.</span></p>
+<p class="p4"><span class="s4">str</span><span class="s1">(z)</span></p>
+<p class="p4"><span class="s1">## List of 3764</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "&lt;ul class=\"uw-people\"&gt;&lt;li&gt;&lt;p&gt;ABBOTT,DAVID H.&lt;" "/&gt;Professor&lt;" "/&gt;Obstetrics &amp;amp; Gynecology&lt;" "/&gt;PHD 1979 University of Edinburgh"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ABD-ELSAYED,ALAA A&lt;" "/&gt;Assoc Professor (Chs)&lt;" "/&gt;Anesthesiology&lt;" "/&gt;MD 2000 University of Assiut"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ABDUALLAH,FAISAL&lt;" "/&gt;Professor&lt;" "/&gt;Art&lt;" "/&gt;PHD 2012 Royal College of Art"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ABRAHAM,OLUFUNMILOLA&lt;" "/&gt;Assistant Professor&lt;" "/&gt;Pharmacy&lt;" "/&gt;PHD 2013 Univ of Wisconsin-Madison"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ABRAMS,SAMANTHA&lt;" "/&gt;Assoc Lecturer&lt;" "/&gt;Information School&lt;" "/&gt;MA 2017 Univ of Wisconsin-Madison"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ABRAMSON,LYN&lt;" "/&gt;Professor&lt;" "/&gt;Psychology&lt;" "/&gt;PHD 1978 University of Pennsylvania"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ACKER,LINDSAY&lt;" "/&gt;Lecturer&lt;" "/&gt;Accting &amp;amp; Info Sys&lt;" "/&gt;MACC 2005 Univ of Wisconsin-Madison"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ACKERMAN,STEVEN&lt;" "/&gt;Professor&lt;" "/&gt;Atmospheric &amp;amp; Oceanic Sciences&lt;" "/&gt;PHD 1987 Colorado State University"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ADAMCZYK,PETER GABRIEL&lt;" "/&gt;Assistant Professor&lt;" "/&gt;Mechanical Engineering&lt;" "/&gt;PHD 2008 Univ of Michigan at Ann Arbor"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ADAMES-CORRALIZA,ANGEL&lt;" "/&gt;Assistant Professor&lt;" "/&gt;Atmospheric &amp;amp; Oceanic Sciences&lt;" "/&gt;PHD 2018 University of Washington"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ADAMS,AERON&lt;" "/&gt;Clinical Asst Prof&lt;" "/&gt;Nursing&lt;" "/&gt;DNP 2017 Univ of Wisconsin-Madison"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ADAMS,MEGAN&lt;" "/&gt;Asst Faculty Assoc&lt;" "/&gt;Information School&lt;" "/&gt;MA<span class="Apple-converted-space">  </span>University of South Florida"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ADCOCK,SARAH&lt;" "/&gt;Assistant Professor&lt;" "/&gt;Animal And Dairy Sciences&lt;" "/&gt;PHD 2020 Univ of California Davis"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ADDINGTON,REBECCA LYNN&lt;" "/&gt;Senior Lecturer&lt;" "/&gt;Psychology&lt;" "/&gt;PHD 1998 Univ of Wisconsin-Madison"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ADDO,FENABA&lt;" "/&gt;Associate Professor&lt;" "/&gt;School Of Human Ecology&lt;" "/&gt;PHD 2012 Ithaca College"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ADELL,SANDRA&lt;" "/&gt;Professor&lt;" "/&gt;Afro-American Studies&lt;" "/&gt;PHD 1989 Univ of Wisconsin-Madison"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "AFFI,ABOUD&lt;" "/&gt;Clinical Adjunct Professor&lt;" "/&gt;Volunteer Staff&lt;" "/&gt;MD 1989 University Of Aleppo"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "AGARWAL,PRIYANKA&lt;" "/&gt;Assistant Professor&lt;" "/&gt;Curriculum And Instruction&lt;" "/&gt;PHD 2019 Univ of California Irvine"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "AGASIE,ROBERT&lt;" "/&gt;Instrmt Innovator/Ins&lt;" "/&gt;Engineering Research Center&lt;" "/&gt;MS 1997 Univ of Wisconsin-Madison"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "AGOKE,ADEOLA&lt;" "/&gt;Asst Faculty Assoc&lt;" "/&gt;African Cultural Studies&lt;" "/&gt;PHD 2019 Univ of Wisconsin-Madison"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "AHLQUIST,PAUL GERALD&lt;" "/&gt;Professor&lt;" "/&gt;Plant Pathology&lt;" "/&gt;PHD 1981 Univ of Wisconsin-Madison"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:3] "AHMAD,JAMEEL&lt;" "/&gt;Senior Lecturer&lt;" "/&gt;South Asian Sum Lang Instit"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "AHMAD,NIHAL&lt;" "/&gt;Professor&lt;" "/&gt;Dermatology&lt;" "/&gt;PHD 1989 University of Lucknow"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "AHMED,AZAM SYED&lt;" "/&gt;Assoc Professor (Chs)&lt;" "/&gt;Neurological Surgery&lt;" "/&gt;MD 2003 Loyola University of Chicago"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "AHN,JAERIN&lt;" "/&gt;Assoc Faculty Assoc&lt;" "/&gt;Asian Languages &amp;amp; Cultures&lt;" "/&gt;MA 2013 Ewha Womans University"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "AHN,SUE&lt;" "/&gt;Professor&lt;" "/&gt;Civil &amp;amp; Environmental Engr&lt;" "/&gt;PHD<span class="Apple-converted-space">  </span>Univ of California Berkeley"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "AHN,YEOHYUN&lt;" "/&gt;Assistant Professor&lt;" "/&gt;Art&lt;" "/&gt;MFA 2007 Maryland Institute Colg Of Art"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "AHRENS,SARAH ELIZABETH&lt;" "/&gt;Clinical Assoc Prof&lt;" "/&gt;Medicine&lt;" "/&gt;MD 2002 U of California San Francisco"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "AI,ALBERT L&lt;" "/&gt;Visiting Asst Prof&lt;" "/&gt;Mathematics&lt;" "/&gt;PHD 2019 Univ of California Berkeley"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "AIKEN,JEFFREY P&lt;" "/&gt;Adjunct Instructor&lt;" "/&gt;Law School&lt;" "/&gt;JD 1972 Marquette University"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "AIZAWA,NAOKI&lt;" "/&gt;Assistant Professor&lt;" "/&gt;Economics&lt;" "/&gt;PHD 2014 University of Pennsylvania"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "AJMANI,VIVEK&lt;" "/&gt;Assoc Faculty Assoc&lt;" "/&gt;Engr Professional Development&lt;" "/&gt;PHD<span class="Apple-converted-space">  </span>"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "AKELLA,ADITYA&lt;" "/&gt;Professor&lt;" "/&gt;Computer Sciences&lt;" "/&gt;PHD 2005 Carnegie-Mellon University"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "AL-ADRA,DAVID&lt;" "/&gt;Assistant Professor&lt;" "/&gt;Surgery&lt;" "/&gt;PHD 2012 University of Alberta"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "AL-SUBU,AWNI M&lt;" "/&gt;Asst Professor (Chs)&lt;" "/&gt;Pediatrics&lt;" "/&gt;MD 2005 Al-Quds University"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ALAGOZ,OGUZHAN&lt;" "/&gt;Professor&lt;" "/&gt;Industrial &amp;amp; Systems Engr&lt;" "/&gt;PHD 2004 University of Pittsburgh"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ALARID,ELAINE&lt;" "/&gt;Professor&lt;" "/&gt;Oncology&lt;" "/&gt;PHD 1991 Univ of California Berkeley"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ALATOUT,SAMER N&lt;" "/&gt;Associate Professor&lt;" "/&gt;Community &amp;amp; Environ Sociology&lt;" "/&gt;PHD 2002 Cornell University"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ALBARGHOUTHI,AWS&lt;" "/&gt;Assistant Professor&lt;" "/&gt;Computer Sciences&lt;" "/&gt;PHD 2014 University of Toronto"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ALBERS,CRAIG&lt;" "/&gt;Associate Professor&lt;" "/&gt;Educational Psychology&lt;" "/&gt;PHD 2002 Arizona State University"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ALBERT,LAURA&lt;" "/&gt;Professor&lt;" "/&gt;Industrial &amp;amp; Systems Engr&lt;" "/&gt;PHD 2006 Univ of IL at Urbana-Champaign"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ALBERTINI,MARK RICHARD&lt;" "/&gt;Professor&lt;" "/&gt;Medicine&lt;" "/&gt;MD 1984 University of Vermont"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ALCALA GALAN,MERCEDES&lt;" "/&gt;Associate Professor&lt;" "/&gt;Spanish And Portuguese&lt;" "/&gt;PHD 1994 Univ Complutense de Madrid"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ALDAG,RAY&lt;" "/&gt;Professor&lt;" "/&gt;Management &amp;amp; Human Resources&lt;" "/&gt;PHD 1974 Michigan State University"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ALDER,SIMEON DAVID&lt;" "/&gt;Faculty Associate&lt;" "/&gt;Economics&lt;" "/&gt;PHD 2009 Univ of California Los Angeles"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:3] "ALESSANDRINO,KAYLA&lt;" "/&gt;Clinical Instructor&lt;" "/&gt;Medical Sciences"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ALEXANDER,ANDREW LAFAYETTE&lt;" "/&gt;Professor&lt;" "/&gt;Medical Physics&lt;" "/&gt;PHD 1994 University of Arizona"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ALEXANDER,ANGELA&lt;" "/&gt;Faculty Associate&lt;" "/&gt;English&lt;" "/&gt;MA 2007 University Of Central Florida"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ALEXANDER,LACEY ANN&lt;" "/&gt;Clinical Asst Prof&lt;" "/&gt;Nursing&lt;" "/&gt;PHD 2018 Univ of Wisconsin-Madison"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ALI,SHANTEL D&lt;" "/&gt;Asst Prof Of Mil Sci&lt;" "/&gt;Military Science&lt;" "/&gt;BA 2002 "</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ALI,SYED EKHTEYAR&lt;" "/&gt;Senior Lecturer&lt;" "/&gt;South Asian Sum Lang Instit&lt;" "/&gt;PHD<span class="Apple-converted-space">  </span>"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ALIBALI,MARTHA W.&lt;" "/&gt;Professor&lt;" "/&gt;Psychology&lt;" "/&gt;PHD 1994 University of Chicago"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ALISCH,REID S&lt;" "/&gt;Assistant Professor&lt;" "/&gt;Neurological Surgery&lt;" "/&gt;PHD 2003 Univ of Michigan at Ann Arbor"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ALLEN,CAITILYN&lt;" "/&gt;Professor&lt;" "/&gt;Plant Pathology&lt;" "/&gt;PHD 1987 VA Polytechnic Inst &amp;amp; State U"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ALLEN,DAVID&lt;" "/&gt;Professor&lt;" "/&gt;Pediatrics&lt;" "/&gt;MD 1980 Duke University"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ALLEN,HEATHER&lt;" "/&gt;Associate Professor&lt;" "/&gt;French And Italian&lt;" "/&gt;PHD 2002 Emory University"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ALLEN,MATT&lt;" "/&gt;Professor&lt;" "/&gt;Engineering Physics&lt;" "/&gt;PHD 2005 Georgia Inst of Technology"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ALLEWAERT,MONIQUE&lt;" "/&gt;Associate Professor&lt;" "/&gt;English&lt;" "/&gt;PHD 2006 Duke University"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ALLIE,MARK C&lt;" "/&gt;Faculty Associate&lt;" "/&gt;Electrical &amp;amp; Computer Engr&lt;" "/&gt;MS 1983 Univ of Wisconsin-Madison"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ALONSO,ARACELI&lt;" "/&gt;Dis Lecturer&lt;" "/&gt;Gender And Women Studies&lt;" "/&gt;PHD 2002 Univ of Wisconsin-Madison"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ALTINO,SOH-HYUN PARK&lt;" "/&gt;Associate Professor&lt;" "/&gt;Mead Witter School Of Music&lt;" "/&gt;PHD 2002 Cleveland Institute Of Music"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ALTSCHAFL,BETH&lt;" "/&gt;Faculty Associate&lt;" "/&gt;Academic Affairs&lt;" "/&gt;PHD 2006 Univ of Wisconsin-Madison"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ALTSECH,MOSES&lt;" "/&gt;Lecturer&lt;" "/&gt;Marketing&lt;" "/&gt;PHD 1996 Pennsylvania State University"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ALTWIES,JOY&lt;" "/&gt;Faculty Associate&lt;" "/&gt;Engr Professional Development&lt;" "/&gt;PHD 2013 Univ of Wisconsin-Madison"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ALVAREZ,ELIZABETH E&lt;" "/&gt;Clinical Asst Prof&lt;" "/&gt;Medical Sciences&lt;" "/&gt;DVM 2003 Michigan State University"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ALVAREZ,SAYLIN&lt;" "/&gt;Senior Lecturer&lt;" "/&gt;Spanish And Portuguese&lt;" "/&gt;PHD<span class="Apple-converted-space">  </span>Univ of Wisconsin-Madison"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "AMADOR-NOGUEZ,DANIEL&lt;" "/&gt;Associate Professor&lt;" "/&gt;Bacteriology&lt;" "/&gt;PHD 2007 Baylor University"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "AMANN,KURT&lt;" "/&gt;Associate Professor&lt;" "/&gt;Integrative Biology&lt;" "/&gt;PHD 1999 Univ of Wisconsin-Madison"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "AMASINO,RICHARD M.&lt;" "/&gt;Professor&lt;" "/&gt;Biochemistry&lt;" "/&gt;PHD 1982 Indiana University"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "AMATO,FELICE CATHERINE&lt;" "/&gt;Lecturer&lt;" "/&gt;Art&lt;" "/&gt;PHD 2018 Univ of Wisconsin-Madison"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "AMINE,LAILA&lt;" "/&gt;Associate Professor&lt;" "/&gt;English&lt;" "/&gt;PHD 2011 Indiana University"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "AMSBARY,PAUL&lt;" "/&gt;Adjunct Assoc Prof&lt;" "/&gt;Information School&lt;" "/&gt;MS 2007 Georgia Inst of Technology"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "AN,PANDUAN&lt;" "/&gt;Visiting Asst Prof&lt;" "/&gt;Statistics&lt;" "/&gt;PHD 2019 Ohio University"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "AN,ZHE GIGI&lt;" "/&gt;Assistant Professor&lt;" "/&gt;Rehab Psychology &amp;amp; Special Ed&lt;" "/&gt;PHD 2018 University of Kansas"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ANANTHARAMAN,KARTHIK&lt;" "/&gt;Assistant Professor&lt;" "/&gt;Bacteriology&lt;" "/&gt;PHD 2014 Univ of Michigan at Ann Arbor"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ANCOS GARCIA,PABLO&lt;" "/&gt;Associate Professor&lt;" "/&gt;Spanish And Portuguese&lt;" "/&gt;PHD 2004 Univ of Wisconsin-Madison"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ANDERSEN,CLAUS E&lt;" "/&gt;Assistant Professor&lt;" "/&gt;German, Nordic &amp;amp; Slavic&lt;" "/&gt;PHD 2015 University of Helsinki"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ANDERSON,DAVID&lt;" "/&gt;Professor&lt;" "/&gt;Electrical &amp;amp; Computer Engr&lt;" "/&gt;PHD 1984 Univ of Wisconsin-Madison"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ANDERSON,DAVID F&lt;" "/&gt;Professor&lt;" "/&gt;Mathematics&lt;" "/&gt;PHD 2005 Duke University"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ANDERSON,KATHRYN&lt;" "/&gt;Lecturer&lt;" "/&gt;Community &amp;amp; Environ Sociology&lt;" "/&gt;PHD 2019 Univ of Wisconsin-Madison"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ANDERSON,LORI&lt;" "/&gt;Assistant Professor&lt;" "/&gt;Nursing&lt;" "/&gt;PHD 2006 Univ of Wisconsin-Madison"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ANDERSON,MARK&lt;" "/&gt;Assistant Professor&lt;" "/&gt;Mechanical Engineering&lt;" "/&gt;PHD 1998 Univ of Wisconsin-Madison"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ANDERSON,PETER&lt;" "/&gt;Senior Lecturer&lt;" "/&gt;Nutritional Sciences&lt;" "/&gt;MS 1995 Univ of Wisconsin-Madison"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ANDERSON,RICHARD A.&lt;" "/&gt;Professor&lt;" "/&gt;Administration&lt;" "/&gt;PHD 1982 Univ of Minnesota-Twin Cities"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ANDERSON,ROZALYN&lt;" "/&gt;Associate Professor&lt;" "/&gt;Medicine&lt;" "/&gt;PHD 1999 Univ of Dublin-Trinity College"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ANDES,DAVID R.&lt;" "/&gt;Professor&lt;" "/&gt;Medicine&lt;" "/&gt;MD 1992 Univ of Missouri-Columbia"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ANDREAE,SUSAN J&lt;" "/&gt;Assistant Professor&lt;" "/&gt;Kinesiology&lt;" "/&gt;PHD 2015 Univ of Alabama at Birmingham"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ANDRESEN,CHRISTIAN G.&lt;" "/&gt;Assistant Professor&lt;" "/&gt;Geography&lt;" "/&gt;PHD 2014 University Of Texas At El Paso"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ANDREWS,JOSEPH&lt;" "/&gt;Assistant Professor&lt;" "/&gt;Mechanical Engineering&lt;" "/&gt;PHD 2019 Duke University"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ANDREWS,LISA M&lt;" "/&gt;Assoc Faculty Assoc&lt;" "/&gt;Consumer Science&lt;" "/&gt;MBA 2004 Univ of Wisconsin-Madison"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ANDREWS,URI&lt;" "/&gt;Associate Professor&lt;" "/&gt;Mathematics&lt;" "/&gt;PHD 2010 Univ of California Berkeley"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ANDRZEJEWSKI,ANNA&lt;" "/&gt;Professor&lt;" "/&gt;Art History&lt;" "/&gt;PHD 2001 University of Delaware"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ANE,CECILE&lt;" "/&gt;Professor&lt;" "/&gt;Botany&lt;" "/&gt;PHD 2000 U de Toulouse II (Le Mirail)"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ANE,JEAN-MICHEL&lt;" "/&gt;Professor&lt;" "/&gt;Bacteriology&lt;" "/&gt;PHD 2002 U de Toulouse II (Le Mirail)"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ANEX,ROBERT&lt;" "/&gt;Professor&lt;" "/&gt;Biological Systems Engineering&lt;" "/&gt;PHD 1995 Univ of California Davis"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ANGENENT,SIGURD B.&lt;" "/&gt;Professor&lt;" "/&gt;Mathematics&lt;" "/&gt;PHD 1986 State Univ Of Leiden"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ANGULO BRACHO,HERNAN LIZARDO&lt;" "/&gt;Clinical Instructor&lt;" "/&gt;Medical Sciences&lt;" "/&gt;DVM 1999 Univ Ncnl Autonoma de Mexico"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ANGUS,JENNIFER&lt;" "/&gt;Professor&lt;" "/&gt;School Of Human Ecology&lt;" "/&gt;MFA 1991 Sch Of The Art Inst Of Chicago"</span></p>
+<p class="p4"><span class="s1">##<span class="Apple-converted-space">  </span>$ : chr [1:4] "ANIBAS,CALLI&lt;" "/&gt;Assoc Research Spec&lt;" "/&gt;Agronomy&lt;" "/&gt;MS 2020 Univ of Wisconsin-Madison"</span></p>
+<p class="p4"><span class="s1">## <span class="Apple-converted-space">  </span>[list output truncated]</span></p>
+</body>
+</html>
